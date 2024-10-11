@@ -16,6 +16,7 @@ private:
 public:
     View();
     ~View();
+    // Estructura: El View debería tener solo una función pública.
     bool mostrarPantallaBienvenido();
     void mostrarDatosExtra();
     void buscarPorPalabraClaveYFormacion();
