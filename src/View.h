@@ -3,10 +3,10 @@
 
 #include "SNIESController.h"
 
-using std::string;
+// Recomendación Linter: Dejar de usar using namespace std y usar std::.
+using namespace std;
 
-class View
-{
+class View {
 private:
     SNIESController controlador;
     bool isConvetibleToInt(const string &);
@@ -15,8 +15,9 @@ private:
     void buscarPorPalabraClaveYFormacion();
     void salir();
 public:
-    View() = default;
+    View();
     ~View();
+    // Estructura: El View debería tener solo una función pública.
     void mostrarMenu();
 };
 

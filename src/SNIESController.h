@@ -9,9 +9,10 @@
 
 using std::map;
 using std::string;
+#include "Settings.h"
 
-class SNIESController
-{
+
+class SNIESController {
 
 private:
     map<long, ProgramaAcademico *> programasAcademicos;

@@ -30,6 +30,8 @@ public:
     static const std::string PROGRAMAS_FILTRAR_FILE_PATH;
     static const std::string BASE_PATH;
     static const std::string DELIMITADOR;
+    static const std::string GRADUADOS_FILE_PATH;
+
 
     // FIXME completar para el resto de constantes
 };
@@ -42,5 +44,7 @@ const std::string Settings::ADMITIDOS_FILE_PATH = BASE_PATH + "admitidos";
 const std::string Settings::MATRICULADOS_FILE_PATH = BASE_PATH + "matriculados";
 const std::string Settings::INSCRITOS_FILE_PATH = BASE_PATH + "inscritos";
 const std::string Settings::DELIMITADOR = ";";
+const std::string GRADUADOS_FILE_PATH = BASE_PATH + "graduados";
+
 
 #endif // SETTINGS_H
