@@ -15,7 +15,7 @@ using std::vector;
 
 
 class GestorDatos {
-protected:
+public:
     // Constructor y Destructor
     GestorDatos();
     ~GestorDatos();
