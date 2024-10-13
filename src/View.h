@@ -11,15 +11,15 @@ class View
 {
 private:
     SNIESController controlador;
-
-public:
-    View();
-    ~View();
+    bool isConvetibleToInt(const string &);
     bool mostrarPantallaBienvenido();
     void mostrarDatosExtra();
     void buscarPorPalabraClaveYFormacion();
     void salir();
-    bool isConvetibleToInt(const string &);
+public:
+    View() = default;
+    ~View();
+    void mostrarMenu();
 };
 
 #endif

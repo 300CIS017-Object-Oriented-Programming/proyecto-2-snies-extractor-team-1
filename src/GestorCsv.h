@@ -5,9 +5,7 @@
 #include <vector>
 #include <map>
 #include <fstream>
-#include <sstream>
 #include <list>
-#include <algorithm>
 #include "ProgramaAcademico.h"
 #include "Consolidado.h"
 
