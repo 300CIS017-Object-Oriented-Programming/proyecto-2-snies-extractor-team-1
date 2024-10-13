@@ -9,7 +9,7 @@
 #include "ProgramaAcademico.h"
 #include "Consolidado.h"
 #include "GestorCsv.h"
-
+#include "Settings.h"
 using namespace std;
 
 class SNIESController
