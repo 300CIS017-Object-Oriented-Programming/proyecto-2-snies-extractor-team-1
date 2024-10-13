@@ -5,18 +5,11 @@
 #include <vector>
 #include <map>
 #include <fstream>
-// Mantenimiento: Se incluyen librerías que no se utilizan
-#include <sstream>
-#include <list>
-#include <algorithm>
-#include "ProgramaAcademico.h"
-#include "Consolidado.h"
 
 // Recomendación Linter: Se debe evitar el uso de using namespace en archivos de cabecera
-using namespace std;
+using std::string;
 
-class GestorCsv
-{
+class GestorCsv {
 public:
     GestorCsv() = default;
     vector<int> leerProgramasCsv(string &ruta);
