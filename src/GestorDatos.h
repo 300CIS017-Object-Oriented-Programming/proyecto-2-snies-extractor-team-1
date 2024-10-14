@@ -15,13 +15,15 @@ using std::vector;
 
 
 class GestorDatos {
-protected:
-    // Constructor y Destructor
-    GestorDatos();
-    ~GestorDatos();
-
+public:
+    // Destructor
+    virtual ~GestorDatos() = default;
     // Metodo para escribir datos procesados en un archivo
-    virtual void exportarDatos(const std::string& filePath) = 0;
+    virtual void exportarDatos(const string& filePath, const vector<map<string, string>>& datos) = 0;
+
+protected:
+    // Metodo de ayuda para manejar errores comunes
+    void manejarErrores(const string& mensaje);
 };
 
 #endif // GESTOR_DATOS_H
