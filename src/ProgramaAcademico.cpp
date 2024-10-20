@@ -351,3 +351,17 @@ ProgramaAcademico::~ProgramaAcademico()
         delete consolidado;
     }
 }
+void ProgramaAcademico::agregarConsolidado(Consolidado *nuevoConsolidado)
+{
+    consolidados.push_back(nuevoConsolidado);
+}
+
+float ProgramaAcademico::calcularTasaPromedioGraduacion()
+{
+    float sumaTasa = 0;
+    for (auto &consolidado : consolidados)
+    {
+        sumaTasa += consolidado->obtenerTasaGraduados();
+    }
+    return consolidados.size() > 0 ? sumaTasa / consolidados.size() : 0;
+}

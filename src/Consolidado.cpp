@@ -93,3 +93,12 @@ void Consolidado::setGraduados(int graduados)
 {
     this->graduados = graduados;
 }
+float Consolidado::obtenerTasaAdmitidos()
+{
+    return inscritos > 0 ? (static_cast<float>(admitidos) / inscritos) * 100 : 0;
+}
+
+float Consolidado::obtenerTasaGraduados()
+{
+    return matriculadosPrimerSemestre > 0 ? (static_cast<float>(graduados) / matriculadosPrimerSemestre) * 100 : 0;
+}
