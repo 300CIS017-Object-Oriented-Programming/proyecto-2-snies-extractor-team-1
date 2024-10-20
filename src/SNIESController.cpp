@@ -422,3 +422,37 @@ void SNIESController::calcularDatosExtra(bool flag)
         creado = gestorCsvObj.crearArchivoExtra(rutaOutput, matrizFinal);
     }
 }
+void cargarDatos(const string& rutaProgramas, const string& ano1, const string& ano2) {
+        vector<int> codigosSnies = gestorCsvObj.leerProgramasCsv(rutaProgramas);
+        vector<vector<string>> programasData = gestorCsvObj.leerArchivoPrimera(rutaProgramas, ano1, codigosSnies);
+
+        for (const auto& fila : programasData) {
+            if (!fila.empty()) {
+                int codigoPrograma = stoi(fila[0]);
+                if (programasAcademicos.find(codigoPrograma) == programasAcademicos.end()) {
+                    crearProgramaAcademico(fila);
+                }
+                crearConsolidado(programasAcademicos[codigoPrograma], fila, 0); // Tipo 0 por ejemplo
+            }
+        }
+    }
+
+    // Método experto
+    float calcularTasaGraduados(int codigoPrograma) {
+        auto it = programasAcademicos.find(codigoPrograma);
+        if (it != programasAcademicos.end()) {
+            ProgramaAcademico* programa = it->second;
+            return programa->calcularTasaGraduacion();
+        }
+    }
+
+    // Método experto 
+    void mostrarConsolidado(int codigoPrograma) {
+        auto it = programasAcademicos.find(codigoPrograma);
+        if (it != programasAcademicos.end()) {
+            ProgramaAcademico* programa = it->second;
+            programa->mostrarInformacion();
+        } else {
+            cout << "Programa no encontrado." << endl;
+        }
+    }

@@ -23,6 +23,8 @@ public:
     // Mantenimiento: Este método tiene un nombre confuso.
     void calcularDatosExtra(bool);
     void buscarProgramas(bool, string &, int);
+    float calcularTasaGraduados(int);
+    void mostrarConsolidado(int);
 };
 
 #endif
