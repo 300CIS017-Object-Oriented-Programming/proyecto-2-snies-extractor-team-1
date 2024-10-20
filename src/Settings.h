@@ -21,6 +21,8 @@
 #define SETTINGS_H
 
 #include <string>
+#include "Constantes.h"
+
 using namespace std;
 
 class Settings

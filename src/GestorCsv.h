@@ -7,6 +7,7 @@
 #include <fstream>
 #include "programaAcademico.h"
 #include <list>
+#include "Constantes.h"
 
 // Recomendación Linter: Se debe evitar el uso de using namespace en archivos de cabecera
 using std::string;

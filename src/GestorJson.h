@@ -5,7 +5,7 @@
 #define GESTOR_JSON_H
 
 #include "GestorDatos.h"
-
+#include "Constantes.h"
 #include <string>
 #include <vector>
 #include <map>

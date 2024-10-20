@@ -8,6 +8,7 @@
 #include <vector>
 #include "GestorCsv.h"
 #include "ProgramaAcademico.h"
+#include "Constantes.h"
 
 
 using std::string;

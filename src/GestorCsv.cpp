@@ -76,7 +76,7 @@ vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &a
         {
             streamFila = stringstream(fila);
             columna = 0;
-            while ((getline(streamFila, dato, ';')) && (columna < 13))
+            while ((getline(streamFila, dato, ';')) && (columna < maxcolum))
             {
                 vectorFila[columna] = dato;
                 columna++;
@@ -85,7 +85,7 @@ vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &a
             // Verificamos que la fila no sea una fila de error
             if (vectorFila[12] != "Sin programa especifico")
             {
-                it = find(codigosSnies.begin(), codigosSnies.end(), stoi(vectorFila[12]));
+                it = find(codigosSnies.begin(), codigosSnies.end(), stoi(vectorFila[fincolum]));
             }
             else
             {
@@ -180,7 +180,7 @@ vector<vector<string>> GestorCsv::leerArchivoSegunda(string &rutaBase, string &a
             columnaVector = 0;
             while ((getline(streamFila, dato, ';')) && (columnaArchivo < 13))
             {
-                if (columnaArchivo == 12)
+                if (columnaArchivo == fincolum)
                 {
                     vectorFila[columnaVector] = dato;
                     columnaVector++;
@@ -223,7 +223,7 @@ vector<vector<string>> GestorCsv::leerArchivoSegunda(string &rutaBase, string &a
                     columnaVector = 0;
                     while (getline(streamFila, dato, ';'))
                     {
-                        if ((columnaArchivo >= 34) || (columnaArchivo == 12))
+                        if ((columnaArchivo >= 34) || (columnaArchivo == fincolum))
                         {
                             vectorFila[columnaVector] = dato;
                             columnaVector++;

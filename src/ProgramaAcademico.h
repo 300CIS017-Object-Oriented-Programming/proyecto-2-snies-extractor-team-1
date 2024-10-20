@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "Consolidado.h"
+#include "Constantes.h"
 
 using namespace std;
 

@@ -2,6 +2,7 @@
 #define VIEW_H
 
 #include "SNIESController.h"
+#include "Constantes.h"
 
 // Recomendación Linter: Dejar de usar using namespace std y usar std::.
 using namespace std;
