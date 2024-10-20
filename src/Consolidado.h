@@ -25,6 +25,7 @@ private:
     int matriculados;
     int matriculadosPrimerSemestre;
     int graduados;
+    int totalMatriculadosPrimerSemestre;
 
 public:
     Consolidado();

@@ -5,9 +5,15 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include "programaAcademico.h"
+#include <list>
 
 // Recomendación Linter: Se debe evitar el uso de using namespace en archivos de cabecera
 using std::string;
+using std::vector;
+using std::map;
+using std::list;
+using std::stringstream;
 
 class GestorCsv {
 public:

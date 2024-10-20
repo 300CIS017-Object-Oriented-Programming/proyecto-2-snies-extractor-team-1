@@ -32,6 +32,13 @@ vector<int> GestorCsv::leerProgramasCsv(string &ruta)
 
 // Complejidad: Este metodo tiene una alta complejidad ciclomática y computacional, reducir en metodos más pequeños
 // Estructuras de control anidadas profundamente.
+
+// Lee un archivo CSV y devuelve una matriz de strings con los datos de interés.
+    // Parámetros:
+    // - rutaBase (string) - ruta base del archivo CSV.
+    // - ano (string) - año del archivo a leer.
+    // - codigosSnies (vector<int>) - vector con los códigos SNIES de programas de interés.
+    // Retorna: una matriz con los datos de programas académicos filtrados
 vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &ano, vector<int> &codigosSnies)
 {
     // Estructura: La estructura es confusa.
@@ -136,6 +143,13 @@ vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &a
 
 // Complejidad: Este metodo tiene una alta complejidad ciclomática y computacional, reducir en metodos más pequeños
 // Parece hacer lo mismo que el metodo leerArchivoPrimera
+
+// Lee un archivo CSV y devuelve una matriz de strings con los datos de interés, similar a leerArchivoPrimera.
+// Parámetros:
+// - rutaBase (string) - ruta base del archivo CSV.
+// - ano (string) - año del archivo a leer.
+// - codigosSnies (vector<int>) - vector con los códigos SNIES de programas de interés.
+// Retorna: una matriz con los datos de programas académicos filtrados.
 vector<vector<string>> GestorCsv::leerArchivoSegunda(string &rutaBase, string &ano, vector<int> &codigosSnies)
 {
     vector<vector<string>> matrizResultado;
@@ -245,7 +259,13 @@ vector<vector<string>> GestorCsv::leerArchivoSegunda(string &rutaBase, string &a
     }*/
     return matrizResultado;
 }
-
+// Lee un archivo CSV y devuelve una matriz de strings con los datos especificados por la columna SNIES.
+// Parámetros:
+// - rutaBase (string) - ruta base del archivo CSV.
+// - ano (string) - año del archivo a leer.
+// - codigosSnies (vector<int>) - vector con los códigos SNIES de programas de interés.
+// - colmunaCodigoSnies (int) - columna del archivo CSV que contiene los códigos SNIES.
+// Retorna: una matriz con los datos de programas académicos filtrados.
 vector<vector<string>> GestorCsv::leerArchivo(string &rutaBase, string &ano, vector<int> &codigosSnies, int colmunaCodigoSnies)
 {
     vector<vector<string>> matrizResultado;
@@ -357,6 +377,12 @@ vector<vector<string>> GestorCsv::leerArchivo(string &rutaBase, string &ano, vec
     return matrizResultado;
 }
 
+// Crea un archivo CSV con los datos de programas académicos.
+// Parámetros:
+// - ruta (string) - ruta donde se creará el archivo CSV.
+// - mapadeProgramasAcademicos (map<int, ProgramaAcademico*>) - mapa con los programas académicos.
+// - etiquetasColumnas (vector<string>) - vector con las etiquetas para las columnas del archivo.
+// Retorna: booleano que indica si el archivo se creó con éxito.
 bool GestorCsv::crearArchivo(string &ruta, map<int, ProgramaAcademico *> &mapadeProgramasAcademicos, vector<string> etiquetasColumnas)
 {
     // Este bool nos ayudará a saber si se creo exitosamente el archivo
@@ -441,6 +467,12 @@ bool GestorCsv::crearArchivo(string &ruta, map<int, ProgramaAcademico *> &mapade
     return estadoCreacion;
 }
 
+// Crea un archivo CSV con los programas académicos buscados.
+// Parámetros:
+// - ruta (string) - ruta donde se creará el archivo CSV.
+// - programasBuscados (list<ProgramaAcademico*>) - lista con los programas buscados.
+// - etiquetasColumnas (vector<string>) - vector con las etiquetas para las columnas del archivo.
+// Retorna: booleano que indica si el archivo se creó con éxito.
 bool GestorCsv::crearArchivoBuscados(string &ruta, list<ProgramaAcademico *> &programasBuscados, vector<string> etiquetasColumnas)
 {
     // Este bool nos ayudará a saber si se creo exitosamente el archivo
@@ -526,6 +558,11 @@ bool GestorCsv::crearArchivoBuscados(string &ruta, list<ProgramaAcademico *> &pr
     return estadoCreacion;
 }
 
+// Crea un archivo CSV con una matriz de datos proporcionada.
+// Parámetros:
+// - ruta (string) - ruta donde se creará el archivo CSV.
+// - datosAImprimir (vector<vector<string>>) - matriz de datos a imprimir en el archivo.
+// Retorna: booleano que indica si el archivo se creó con éxito.
 bool GestorCsv::crearArchivoExtra(string &ruta, vector<vector<string>> datosAImprimir)
 {
     // Este bool nos ayudará a saber si se creo el archivo exitosamente
