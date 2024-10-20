@@ -437,7 +437,7 @@ void cargarDatos(const string& rutaProgramas, const string& ano1, const string& 
         }
     }
 
-    // Método experto
+    // Metodo experto
     float calcularTasaGraduados(int codigoPrograma) {
         auto it = programasAcademicos.find(codigoPrograma);
         if (it != programasAcademicos.end()) {
@@ -446,7 +446,7 @@ void cargarDatos(const string& rutaProgramas, const string& ano1, const string& 
         }
     }
 
-    // Método experto 
+    // Metodo experto 
     void mostrarConsolidado(int codigoPrograma) {
         auto it = programasAcademicos.find(codigoPrograma);
         if (it != programasAcademicos.end()) {
