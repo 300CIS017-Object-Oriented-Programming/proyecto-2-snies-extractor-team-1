@@ -1,6 +1,5 @@
 #include "Consolidado.h"
 
-// Constructor por defecto: no realiza ninguna inicialización especial.
 Consolidado::Consolidado() = default;
 
 // Constructor con parámetros: inicializa los atributos de la clase con los valores proporcionados.

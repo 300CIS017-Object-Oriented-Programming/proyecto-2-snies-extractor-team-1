@@ -5,6 +5,7 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include <sstream>
 #include "programaAcademico.h"
 #include <list>
 #include "Constantes.h"
@@ -19,7 +20,7 @@ using std::stringstream;
 class GestorCsv {
 public:
     GestorCsv() = default;
-    vector<int> leerProgramasCsv(string &ruta);
+    vector<string> leerProgramasCsv(string &ruta);
     // Mantenimiento: Se puede mejorar la firma y nombre de los metodos para que sea más descriptiva
     vector<vector<string>> leerArchivoPrimera(string &rutaBase, string &ano, vector<int> &codigosSnies);
     vector<vector<string>> leerArchivoSegunda(string &rutaBase, string &ano, vector<int> &codigosSnies);
