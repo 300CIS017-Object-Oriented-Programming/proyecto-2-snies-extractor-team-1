@@ -2,6 +2,17 @@
 
 Consolidado::Consolidado() = default;
 
+// Constructor con parámetros: inicializa los atributos de la clase con los valores proporcionados.
+// Parámetros:
+// - idSexo: Identificador del sexo.
+// - sexo: Descripción del sexo.
+// - ano: Año del consolidado.
+// - semestre: Semestre del consolidado.
+// - inscritos: Número de inscritos en el semestre.
+// - admitidos: Número de admitidos en el semestre.
+// - primeraMatricula: Número de estudiantes con primera matrícula.
+// - totalMatriculados: Número total de matriculados en el primer semestre.
+// - graduados: Número de estudiantes graduados.
 Consolidado::Consolidado(int idSexo, string sexo, int ano, int semestre, int inscritos, int admitidos, 
                          int primeraMatricula, int totalMatriculados, int graduados)
     : idSexo(idSexo), sexo(sexo), ano(ano), semestre(semestre), inscritos(inscritos), admitidos(admitidos), 
