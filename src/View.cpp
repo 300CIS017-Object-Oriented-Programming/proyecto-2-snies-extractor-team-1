@@ -1,7 +1,5 @@
 #include "View.h"
 
-// Mantenimiento: Implementar la lectura de las rutas de los archivos CSV desde un
-// archivo de configuración
 View::View()
 {
     // NEW quitar estas variables de aquí y del constructor del SNIESController

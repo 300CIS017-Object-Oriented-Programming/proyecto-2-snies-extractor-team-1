@@ -29,15 +29,7 @@ vector<string> GestorCsv::leerProgramasCsv(string &ruta)
     return codigosSniesRetorno;
 }
 
-// Complejidad: Este metodo tiene una alta complejidad ciclomática y computacional, reducir en metodos más pequeños
-// Estructuras de control anidadas profundamente.
 
-// Lee un archivo CSV y devuelve una matriz de strings con los datos de interés.
-    // Parámetros:
-    // - rutaBase (string) - ruta base del archivo CSV.
-    // - ano (string) - año del archivo a leer.
-    // - codigosSnies (vector<int>) - vector con los códigos SNIES de programas de interés.
-    // Retorna: una matriz con los datos de programas académicos filtrados
 vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &ano, vector<int> &codigosSnies)
 {
     // Estructura: La estructura es confusa.
@@ -649,7 +641,7 @@ vector<vector<string>> GestorCsv::leerArchivoPrimera(string &rutaBase, string &a
             }
 
             // Verificamos que la fila no sea una fila de error
-            if (vectorFila[12] != "Sin programa especifico")
+            if (vectorFila[fincolum] != "Sin programa especifico")
             {
                 it = find(codigosSnies.begin(), codigosSnies.end(), stoi(vectorFila[fincolum]));
             }
