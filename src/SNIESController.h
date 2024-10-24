@@ -31,6 +31,7 @@ private:
     vector<string> etiquetasColumnas;   
 
 public:
+    SNIESController();
     SNIESController(string &nuevaRutaProgramasCSV, string &nuevaRutaAdmitidos, string &nuevaRutaGraduados, 
                     string &nuevaRutaInscritos, string &nuevaRutaMatriculadosc, 
                     string &nuevaRutaMatriculadosPrimerSemestre, string &nuevaRutaOutput);
@@ -43,7 +44,7 @@ public:
 
     void calcularDatosExtra(bool flag);
 
-    void cargarDatos(const string& rutaProgramas, const string& ano1, const string& ano2);
+    void cargarDatos(string& rutaProgramas, string& ano1, string& ano2);
 
     float calcularTasaGraduados(int codigoPrograma);
 
