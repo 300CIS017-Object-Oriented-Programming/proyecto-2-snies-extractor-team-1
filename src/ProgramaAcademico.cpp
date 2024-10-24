@@ -4,7 +4,7 @@ using namespace std;
 
 ProgramaAcademico::ProgramaAcademico()
 {
-    consolidados = vector<Consolidado *>(8);
+    consolidados = vector<Consolidado *>(initconsolidados);
 }
 
 void ProgramaAcademico::setCodigoDeLaInstitucion(int nuevoCodigoDeLaInstitucion)
@@ -350,4 +350,18 @@ ProgramaAcademico::~ProgramaAcademico()
     {
         delete consolidado;
     }
+}
+void ProgramaAcademico::agregarConsolidado(Consolidado *nuevoConsolidado)
+{
+    consolidados.push_back(nuevoConsolidado);
+}
+
+float ProgramaAcademico::calcularTasaPromedioGraduacion()
+{
+    float sumaTasa = tasagraduacion;
+    for (auto &consolidado : consolidados)
+    {
+        sumaTasa += consolidado->obtenerTasaGraduados();
+    }
+    return consolidados.size() > tasagraduacion ? sumaTasa / consolidados.size() : tasagraduacion;
 }

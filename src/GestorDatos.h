@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "Constantes.h"
 
 using std::string;
 using std::map;
