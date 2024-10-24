@@ -42,16 +42,19 @@ void GestorJson::exportarDatos(const string& filePath, const vector<std::map<str
             size_t entryCount = 0;  // Contador para separar elementos con comas.
 
             // Iterar sobre el mapa de la entrada actual.
-            for (const auto& [key, value] : entry) {
-                // Escribir la clave y el valor en formato JSON.
-                file << "    \"" << key << "\": \"" << value << "\"";
-                
-                // Agregar coma si no es el último elemento de la entrada.
-                if (++entryCount < entry.size()) {
-                    file << ",";
+            for (const auto& pair : entry) {
+                    const auto& key = pair.first;
+                    const auto& value = pair.second;
+
+                    // Escribir la clave y el valor en formato JSON.
+                    file << "    \"" << key << "\": \"" << value << "\"";
+                            
+                    // Agregar coma si no es el último elemento de la entrada.
+                    if (++entryCount < entry.size()) {
+                        file << ",";
+                    }
+                    file << "\n";
                 }
-                file << "\n";
-            }
 
             file << "  }";
             // Agregar coma si no es la última entrada del vector.
