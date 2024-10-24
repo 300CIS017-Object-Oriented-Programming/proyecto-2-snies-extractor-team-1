@@ -154,8 +154,8 @@ public:
     void setConsolidado(Consolidado *nuevoConsolidado, int pos);
     Consolidado *getConsolidado(int posicionConsolidado);
 
-    void ProgramaAcademico::agregarConsolidado(Consolidado *nuevoConsolidado);
-    float ProgramaAcademico::calcularTasaPromedioGraduacion();
+    void agregarConsolidado(Consolidado *nuevoConsolidado);
+    float calcularTasaPromedioGraduacion();
     
     ~ProgramaAcademico();
 };

@@ -61,8 +61,8 @@ public:
     int getGraduados();
     void setGraduados(int);
 
-    float Consolidado::obtenerTasaAdmitidos();
-    float Consolidado::obtenerTasaGraduados();
+    float obtenerTasaAdmitidos();
+    float obtenerTasaGraduados();
 };
 
 #endif // CONSOLIDADO_H

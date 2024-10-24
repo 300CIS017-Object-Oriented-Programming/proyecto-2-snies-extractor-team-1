@@ -2,6 +2,14 @@
 
 // FIXME: LA LECTURA DE ARCHIVOS CON GETLINE FUNCIONA HORRIBLEMENTE, NO TENEMOS IDEA DE POR QUÉ
 
+
+using std::string;
+using std::vector;
+using std::map;
+using std::list;
+using std::stringstream;
+
+
 vector<string> GestorCsv::leerProgramasCsv(string &ruta)
 {
     vector<string> codigosSniesRetorno;
