@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "Constantes.h"
 
 
 using std::cin;
@@ -25,6 +26,7 @@ private:
     int matriculados;
     int matriculadosPrimerSemestre;
     int graduados;
+    int totalMatriculadosPrimerSemestre;
 
 public:
     Consolidado();
@@ -58,6 +60,9 @@ public:
 
     int getGraduados();
     void setGraduados(int);
+
+    float obtenerTasaAdmitidos();
+    float obtenerTasaGraduados();
 };
 
 #endif // CONSOLIDADO_H
